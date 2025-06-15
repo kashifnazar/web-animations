@@ -7,7 +7,6 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      font-family: Arial, sans-serif;
     }
 
     .container {
@@ -23,15 +22,15 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 100px;
+      height: 150px;
       background: linear-gradient(to top, #228B22, #7CFC00);
       box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
 
     .ball {
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
       background: radial-gradient(circle at center, white 1%, red 50%);
       border-radius: 50%;
       box-shadow: #333 0 20px 20px;
@@ -46,7 +45,7 @@
       }
 
       100% {
-        transform: translateY(calc(100vh - 100px));
+        transform: translateY(calc(100vh - 200px));
       }
     }
   </style>

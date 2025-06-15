@@ -3,13 +3,41 @@
 
 <head>
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to bottom, skyblue, white);
+    }
+
+    .grass {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, #228B22, #7CFC00);
+      box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
     .ball {
       width: 50px;
       height: 50px;
-      background-color: red;
+      background: radial-gradient(circle at center, white 1%, red 50%);
       border-radius: 50%;
+      box-shadow: #333 0 20px 20px;
+      z-index: 2;
 
-      animation: bounce 2s infinite alternate ease-in-out;
+      animation: bounce 2s infinite alternate linear(0, 1 95%, 1)
     }
 
     @keyframes bounce {
@@ -25,7 +53,11 @@
 </head>
 
 <body>
-  <div class="ball"></div>
+
+  <div class="container">
+    <div class="ball"></div>
+    <div class="grass"></div>
+  </div>
 </body>
 
 </html>

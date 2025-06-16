@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 50%;
+      border: skyblue 10px dashed;
+      animation: rotate 3s infinite forwards linear;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle:hover,
+    .circle:hover>* {
+      animation-play-state: paused;
+    }
+
+
+    .inner-circle {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 50%;
+      border: skyblue 5px dashed;
+      animation: rotate 2s infinite reverse linear;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle">
+    <div class="inner-circle"></div>
+  </div>
+</body>
+
+</html>
